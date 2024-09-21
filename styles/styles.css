@@ -30,12 +30,12 @@ img {
 
 /*p elements*/
 p {
-    padding: 0px;
+    padding: 0;
 }
 
 /*main elements*/
 main {
-    width: 840px;
+    max-width: 840px;
 
 }
 
@@ -57,7 +57,7 @@ aside {
 }
 
 aside img {
-    width: 200 px;
+    width: 200px;
     height: auto;
 }
 
