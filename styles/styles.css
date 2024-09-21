@@ -30,5 +30,40 @@ img {
 
 /*p elements*/
 p {
-    padding: 10px;
+    padding: 0px;
+}
+
+/*main elements*/
+main {
+    width: 840px;
+
+}
+
+main img{
+    width: 200px;
+    height: auto;
+}
+
+/*aside elements*/
+aside {
+    width: 20rem;
+    margin: 1rem;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 1rem;
+    background-color: #eee;
+    color: #333;
+    text-align: center;
+
+}
+
+aside img {
+    width: 200 px;
+    height: auto;
+}
+
+/*footer elements*/
+footer{
+    margin-top: 5px;
+    border-top: 25px;
+    text-align: center;
 }
