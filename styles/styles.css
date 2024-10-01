@@ -1,31 +1,55 @@
 /*Setting styles for the main page and others*/
 
+/*Get globals*/
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+}
+
+/*setting up global vars*/
+:root {
+    /*get colors*/
+    --col-banner-and-h1   : steelblue;
+    --col-nav-links             : white;
+    --col-aside-background      : #eee;
+    --col-aside-border          : rgba(0,0,0,0.2);
+    --col-std-border            : var(--col-aside-border);
+    --col-aside                 : #333;
+    --col-img-background        : gray;
+    
+    /*get layout*/
+    /*img*/
+    --img-std-width             : 150px;
+    --img-asside-width          : 200px;
+    --img-std-height            : auto;
+}
+
 /*nav elements*/
 nav {
-    background-color: steelblue;
+    background-color: var(--col-banner-and-h1);
     padding: 10px;
 }
 
 /*Any a tag within nav*/
 nav a {
-    color: white;
+    color: var(--col-nav-links);
     display: block;
     padding: 20px;
 }
 
 /*h1 elements*/
 h1 {
-    color: steelblue;
+    color: var(--col-banner-and-h1);
 }
 
 /*img elements*/
 img {
-
-    width: 150px;
-    height: auto;
-    border: 1px solid steelblue;
+    width: var(--img-std-width);
+    height: var(--img-std-height);
+    border: 1px solid var(--col-banner-and-heading1);
     padding: 2px;
-    box-shadow: 0 0 30px gray;
+    box-shadow: 0 0 30px var(--col-img-background);
 }
 
 /*p elements*/
@@ -40,30 +64,45 @@ main {
 }
 
 main img{
-    width: 200px;
-    height: auto;
+    
+    width: var(--img-asside-width);
+    height: var(--img-std-height);
+    float: right;
+    margin-right: 1rem;
 }
 
 /*aside elements*/
 aside {
     width: 20rem;
-    margin: 1rem;
-    border: 1px solid rgba(0,0,0,0.2);
-    padding: 1rem;
-    background-color: #eee;
-    color: #333;
     text-align: center;
-
 }
 
 aside img {
-    width: 200px;
-    height: auto;
+    width: var(--img-asside-width);
+    height: var(--img-std-height);
 }
+
+aside h2 {
+    position : relative;
+    top: 38px;
+    left: 0px;  
+    font-size: 12pt; /*I had to make the font smaller so it would fit*/
+    color : rgb(213, 216, 237); /*This makes it easier to see*/
+    filter: drop-shadow(3px 3px 3px #8f1111) /*This makes it easier to see*/
+ }
 
 /*footer elements*/
 footer{
     margin-top: 5px;
     border-top: 25px;
     text-align: center;
+}
+
+/*Class Selectors*/
+.box {
+    margin: 1rem;
+    border: 1px solid var(--col-std-border);
+    padding: 1rem;
+    background-color: #ddd;
+    color: var(--col-aside);
 }
