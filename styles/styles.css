@@ -63,16 +63,16 @@ main {
 
 }
 
-main img{
-    
+main img {
+    float: right;
     width: var(--img-asside-width);
     height: var(--img-std-height);
-    float: right;
-    margin-right: 1rem;
+    
 }
 
 /*aside elements*/
 aside {
+    position : relative;
     width: 20rem;
     text-align: center;
 }
@@ -83,9 +83,9 @@ aside img {
 }
 
 aside h2 {
-    position : relative;
-    top: 38px;
-    left: 0px;  
+    position: absolute;
+    top: 36px;
+    left: 116px;  
     font-size: 12pt; /*I had to make the font smaller so it would fit*/
     color : rgb(213, 216, 237); /*This makes it easier to see*/
     filter: drop-shadow(3px 3px 3px #8f1111) /*This makes it easier to see*/
@@ -104,5 +104,5 @@ footer{
     border: 1px solid var(--col-std-border);
     padding: 1rem;
     background-color: #ddd;
-    color: var(--col-aside);
+    color: #000;
 }
