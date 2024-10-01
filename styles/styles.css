@@ -21,7 +21,7 @@
     /*get layout*/
     /*img*/
     --img-std-width             : 150px;
-    --img-asside-width          : 200px;
+    --img-aside-width          : 200px;
     --img-std-height            : auto;
 }
 
@@ -65,7 +65,7 @@ main {
 
 main img {
     float: right;
-    width: var(--img-asside-width);
+    width: var(--img-aside-width);
     height: var(--img-std-height);
     
 }
@@ -78,14 +78,17 @@ aside {
 }
 
 aside img {
-    width: var(--img-asside-width);
+    
+    margin: 1rem 2.5rem 1rem 2.5rem;
+    width: var(--img-aside-width);
     height: var(--img-std-height);
 }
 
+
 aside h2 {
     position: absolute;
-    top: 36px;
-    left: 116px;  
+    top: 3.25rem;
+    left: 4.75rem;  
     font-size: 12pt; /*I had to make the font smaller so it would fit*/
     color : rgb(213, 216, 237); /*This makes it easier to see*/
     filter: drop-shadow(3px 3px 3px #8f1111) /*This makes it easier to see*/
