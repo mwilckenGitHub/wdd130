@@ -1,0 +1,157 @@
+
+
+/*Get globals*/
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+    font-family: Sarabin, sans-serif; /*Set the general font family*/
+    
+}
+
+
+/*setting up global vars*/
+:root {
+    /*get colors*/
+    --col-main-backround        : #fefefe;
+    --col-primary               : #0E71A5;
+    --col-primary-background    : #0E71A577;
+    --col_secondary-background  : #1b313a77;
+    --col-secondary             : #7093A1;
+    --col-accent1               : #E8A635;
+    --col-accent2               : #282828;
+    --col-accent1_background    : #E8A63577;
+    
+    --col_p                     : #000;
+
+    /*get layout*/
+    /*img*/
+    --img-std-width             : 150px;
+    --img-aside-width           : 200px;
+    --img-std-height            : auto;
+
+    /*Get box widths*/
+    --box-width                 : 100%;
+}
+
+/*general sizing*/
+body {
+    padding : 5%;
+}
+
+/*header*/
+/*should remove underlines in the header links*/
+header a {
+    text-decoration: none;
+}
+
+/*main*/
+main {
+
+}
+/*This should flow below the hero banner*/
+main section {
+    position : relative;
+    top: 23rem;
+}
+
+
+/*The hero banner*/
+/*Goal: To have the happy employee image and description text inside the hero image*/
+.hero {
+    position: relative;
+}
+
+.hero img {
+    position: absolute;
+    display : block;
+    width: var(--box-width);
+    height: auto;
+}
+
+/*Looks good*/
+.hero h1 {
+    position: absolute;
+    top : 2rem;
+    background-color: var(--col_secondary-background);
+    width: var(--box-width);
+    font-size: 4rem;
+    text-align: center;
+    text-shadow: 0px 0px 1rem #fefefe; /*text-shadow per W3 Schools*/
+    color: var(--col-primary);
+    font-family: "Denk One", sans-serif;
+
+    /*Set a margin*/
+    margin-bottom : 3rem;
+}
+
+.hero h2 {
+    color: #fff;
+    text-shadow: 1px 1px var(--col-accent2);
+}
+
+.hero article {
+    position: absolute;
+    top : 8rem;
+    left : 5%;
+    width: 90%;
+    padding: 1%;
+   
+    background-color: var(--col-primary-background);
+    clear: both;
+}
+
+/*happy employee within the hero image*/
+.hero article img {
+    position: relative;
+    float : right;
+    padding-left: 15px;
+    width: 15%;
+    height: auto;
+}/**/
+
+/*Hero paragraph*/
+.hero article p {
+    color: var(--col-main-backround);
+    text-shadow: 1px 1px var(--col-accent2);
+}
+
+
+.our-experiences img
+{
+    height : 300px;
+    width: auto;
+    position: inherit;
+}
+
+h2 {
+    color: var(--col-accent1);
+    text-shadow: 2px 1px var(--col-secondary);
+    font-family: "Denk One", sans-serif;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    color : var(--col_p);
+    font-family: Sarabin, sans-serif;
+}
+
+/*Set Footer*/
+
+footer{
+    position : relative;
+    top : 25rem;
+}
+
+/*Remove all underlines from the social links*/
+.sociallinks a {
+    text-decoration: none;
+}
+
+/*Set image links to 1 EM-dash*/
+/*Remove any underline just in case*/
+.socialLinks img {
+    width: 1rem;
+    text-decoration: none;
+}

@@ -10,7 +10,7 @@
 /*setting up global vars*/
 :root {
     /*get colors*/
-    --col-banner-and-h1   : steelblue;
+    --col-banner-and-h1         : steelblue;
     --col-nav-links             : white;
     --col-aside-background      : #eee;
     --col-aside-border          : rgba(0,0,0,0.2);
@@ -21,7 +21,7 @@
     /*get layout*/
     /*img*/
     --img-std-width             : 150px;
-    --img-aside-width          : 200px;
+    --img-aside-width           : 200px;
     --img-std-height            : auto;
 }
 
