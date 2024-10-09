@@ -28,19 +28,28 @@
 /*nav elements*/
 nav {
     background-color: var(--col-banner-and-h1);
-    padding: 10px;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
 }
 
 /*Any a tag within nav*/
 nav a {
     color: var(--col-nav-links);
     display: block;
-    padding: 20px;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
 /*h1 elements*/
 h1 {
     color: var(--col-banner-and-h1);
+    padding-bottom: 1rem;
+    border-bottom: solid 2px;
 }
 
 /*img elements*/
@@ -52,29 +61,40 @@ img {
     box-shadow: 0 0 30px var(--col-img-background);
 }
 
-/*p elements*/
-p {
-    padding: 0;
+
+/*Complementary elements*/
+header, .grid, footer {
+    max-width: 840px;
+    margin: 0 auto;
+
+    text-decoration: none;
+}
+
+.grid {
+    display: grid;
+    column-width: 1fr 2fr;
+    align-items: center;
+
 }
 
 /*main elements*/
 main {
-    max-width: 840px;
-
+    grid-column: 2/3;
+    max-width: 480px; /*Seems to fit well*/
 }
 
 main img {
     float: right;
     width: var(--img-aside-width);
-    height: var(--img-std-height);
+    height: var(--img-std-height);/**/
     
 }
 
 /*aside elements*/
 aside {
     position : relative;
-    width: 20rem;
-    text-align: center;
+    grid-column: 1/2;
+    grid-row: 1/2;
 }
 
 aside img {
