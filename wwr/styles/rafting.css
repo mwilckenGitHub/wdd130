@@ -7,6 +7,7 @@
     box-sizing : border-box;
     font-family: Sarabin, sans-serif; /*Set the general font family*/
     
+    
 }
 
 
@@ -32,27 +33,59 @@
 
     /*Get box widths*/
     --box-width                 : 100%;
+
+    --figure-width              : 11rem;
+
 }
 
 /*general sizing*/
 body {
-    padding : 5%;
+    padding : 10px;
 }
 
 /*header*/
-/*should remove underlines in the header links*/
-header a {
-    text-decoration: none;
+
+header{
+    /**/
 }
+
+
+.grid-header-container{
+    display: grid;
+    grid-template-columns: minmax(var(--img-std-width),auto) 1fr; /*Set the image and links to be in a grid of 1 fractional unit*/
+    grid-gap: 1em;
+    background-color: var(--col-primary);
+    border: solid 0.5rem var(--col-accent1);
+}
+.grid-header-container > img {
+    display: flex;
+    align-items: flex-end;
+}
+
+.grid-header-container > .grid-header-container-links
+{
+    display: flex;
+    justify-content:space-evenly;
+    align-items:center;    
+    flex: 1;
+    
+    
+}
+
+/*should remove underlines in the header links*/
+.grid-header-container-links > .grid-header-container-subLink
+{
+    text-decoration: none;
+    font-size:x-large;
+    color: #E8A635;
+    text-shadow: 1px 1px #000000;
+}
+
+
 
 /*main*/
 main {
-
-}
-/*This should flow below the hero banner*/
-main section {
-    position : relative;
-    top: 23rem;
+    /**/
 }
 
 
@@ -60,6 +93,7 @@ main section {
 /*Goal: To have the happy employee image and description text inside the hero image*/
 .hero {
     position: relative;
+    min-height: 5rem;
 }
 
 .hero img {
@@ -72,10 +106,10 @@ main section {
 /*Looks good*/
 .hero h1 {
     position: absolute;
-    top : 2rem;
+    top : 0.75rem;
     background-color: var(--col_secondary-background);
     width: var(--box-width);
-    font-size: 4rem;
+    font-size: 2.5rem;
     text-align: center;
     text-shadow: 0px 0px 1rem #fefefe; /*text-shadow per W3 Schools*/
     color: var(--col-primary);
@@ -92,11 +126,11 @@ main section {
 
 .hero article {
     position: absolute;
-    top : 8rem;
+    top : 4.25rem;
     left : 5%;
     width: 90%;
     padding: 1%;
-   
+    
     background-color: var(--col-primary-background);
     clear: both;
 }
@@ -106,7 +140,7 @@ main section {
     position: relative;
     float : right;
     padding-left: 15px;
-    width: 15%;
+    width: 25%;
     height: auto;
 }/**/
 
@@ -116,12 +150,48 @@ main section {
     text-shadow: 1px 1px var(--col-accent2);
 }
 
+/*This should flow below the hero banner*/
+main section {
+    position : relative;
+    top: 20rem;
+}
 
-.our-experiences img
+/*The history section*/
+.history h2 {
+    text-align: center;
+
+}
+
+/*Our experiences*/
+.our-experiences {
+    /**/
+}
+
+.our-experiences h2
 {
-    height : 300px;
-    width: auto;
-    position: inherit;
+    text-align: center;
+}
+
+.our-experiences > .our-experiences-images
+{
+    display: flex;
+    justify-content:space-around ;
+    align-items:flex-start;
+}
+
+.our-experiences > .our-experiences-images > figure > img {
+    
+    height: auto;
+    width: var(--figure-width);
+    object-fit: contain;
+}
+
+.our-experiences > .our-experiences-images > figure > figcaption {
+    text-align: center;
+    
+    height: auto;
+    width: var(--figure-width);
+    
 }
 
 h2 {
@@ -138,20 +208,33 @@ p {
 }
 
 /*Set Footer*/
-
 footer{
     position : relative;
-    top : 25rem;
+    top : 22.5rem;
 }
 
-/*Remove all underlines from the social links*/
-.sociallinks a {
-    text-decoration: none;
+/*grid of footer content*/
+.grid-footer-container {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
 }
 
+/*footer column 2*/
+.grid-footer-container > p {
+    justify-self:center;
+    grid-column-start: 2;
+}
+
+/*footer column 3*/
+.grid-footer-container > .socialLinks {
+    grid-column-start: 3;
+    justify-self: right;
+}
 /*Set image links to 1 EM-dash*/
 /*Remove any underline just in case*/
-.socialLinks img {
-    width: 1rem;
+.grid-footer-container > .socialLinks img {
+    width: 1em;
     text-decoration: none;
 }

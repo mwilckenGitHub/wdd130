@@ -24,13 +24,17 @@
 <body>
     <!--Get Header-->
     <header>
-        <img src="images/rafting-momentum.jpg" alt="Rafting site logo" width="200">
-        <nav>
-            <a href="index.html">Main Page</a>
-            <a href="about.html">About Us</a>
-            <a href="trips.html">Trip Planning</a>
-            <a href="Contact.html">Contact Us</a>
-        </nav>
+        <!--Get a div element for the header-->
+        <div class="grid-header-container">
+            <img src="images/rafting-momentum.jpg" alt="Rafting site logo" width="200">
+            <!--Get class for the sub-grids-->
+            <nav class="grid-header-container-links">
+                <a href="index.html"    class="grid-header-container-subLink">Main Page</a>
+                <a href="about.html"    class="grid-header-container-subLink">About Us</a>
+                <a href="trips.html"    class="grid-header-container-subLink">Trip Planning</a>
+                <a href="Contact.html"  class="grid-header-container-subLink">Contact Us</a>
+            </nav>
+        </div>
     </header>
     <main>
         <!--Get Hero Banner-->
@@ -38,38 +42,55 @@
             <img src="images/salmon-kayak-banner2.jpg" alt="Salmon Kayak Banner">
             <h1>Rafting Momentum</h1>
             <article>
-                <h2>Our Commitment</h2><!--I had to add this because the Validation tool was saying that it needed a header within an article tag...-->
+                <!--Had to move the image before the h2-->
                 <img src="images/our-employees.jpg" alt="Our Employees" width="200">
+                <h2>Our Commitment</h2><!--I had to add this because the Validation tool was saying that it needed a header within an article tag...-->
                 <p>Rafting Momentum is committed to your experience; your "momentum." Rafting Momentum is the go-to river rafting experience for thousands of customers. We offer world-class guided rafting experiences along the Snake River and its tributaries ranging from Jackson Hole, Wyoming to Idaho Falls, Idaho.</p>
             </article>
         </div>
         <!--This text should flow below the hero banner-->
-        <section>
+        <!--Get history class to match wireframe-->
+        <section class="history">
             <h2>History</h2>
-            <p>Founded in 1999, Rafting Momentum has since graced the pages of Time Magizine and the New York Times for its world-class experience and service</p>
+            <!--Looks like an image is not necessary here though the wireframe shows an image-->
+            <p>Founded in 1999, Rafting Momentum has graced the pages of Time Magizine to the New York Times for its world-class experience and service. Our tours have hosted the most experienced river rafters to celebrities to first-time river adventurers. We hope you will choose us for your next excursion!</p>
         </section>
         <section class="our-experiences">
             <h2>Adventure Awaits You!</h2>
-            <img src="images/about-us-rafting-experience1.jpg" alt="our experiences">
-            <p>Exciting Rapids!</p>
-            <img src="images/about-us-rafting-experience2.jpg" alt="our experiences">
-            <p>Rapids South of Grand Teton National Park</p>
-            <img src="images/about-us-rafting-experience3.jpg" alt="our experiences">
-            <p>Family Adventures</p>
-            <img src="images/about-us-rafting-experience4.jpg" alt="our experiences">
-            <p>Cresting Rapids</p>
-            <img src="images/about-us-rafting-experience5.jpg" alt="our experiences">
-            <p>Guided Tours</p>
+            <div class="our-experiences-images">
+                <figure>
+                    <img src="images/about-us-rafting-experience1.jpg" alt="our experiences" >
+                    <figcaption>Exciting Rapids!</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/about-us-rafting-experience2.jpg" alt="our experiences" >
+                    <figcaption>Rapids South of Grand Teton National Park</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/about-us-rafting-experience3.jpg" alt="our experiences" >
+                    <figcaption>Family Adventures</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/about-us-rafting-experience4.jpg" alt="our experiences" >
+                    <figcaption>Cresting Rapids</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/about-us-rafting-experience5.jpg" alt="our experiences" >
+                    <figcaption>Guided Tours</figcaption>
+                </figure>
+            </div>
         </section>
 
     </main>
     <footer>
-        <p>&copy; 2024 Rafting Momentum | Matthew Wilcken</p>
-        <nav class="socialLinks">
-            <a href="https://www.facebook.com/"><img src="images/facebook-icon.png" alt="Facebook"></a>
-            <a href="https://x.com/home"><img src="images/x-icon.png" alt="X"></a>
-            <a href="https://www.yahoo.com/"><img src="images/yahoo-icon.png" alt="Yahoo"></a>
-        </nav>
+        <div class="grid-footer-container">
+            <p>&copy; 2024 Rafting Momentum | Matthew Wilcken</p>
+            <nav class="socialLinks">
+                <a href="https://www.facebook.com/"><img src="images/facebook-icon.png" alt="Facebook"></a>
+                <a href="https://x.com/home"><img src="images/x-icon.png" alt="X"></a>
+                <a href="https://www.yahoo.com/"><img src="images/yahoo-icon.png" alt="Yahoo"></a>
+            </nav>
+        </div>
     </footer>
 </body>
 </html>
