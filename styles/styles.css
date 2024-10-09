@@ -72,7 +72,6 @@ header, .grid, footer {
 
 .grid {
     display: grid;
-    column-width: 1fr 2fr;
     align-items: center;
 
 }
