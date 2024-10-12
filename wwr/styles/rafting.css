@@ -60,16 +60,16 @@ header{
 .grid-header-container > img {
     display: flex;
     align-items: flex-end;
+    width: 65px;
+    
 }
 
 .grid-header-container > .grid-header-container-links
 {
     display: flex;
     justify-content:space-evenly;
-    align-items:center;    
-    flex: 1;
-    
-    
+    align-items:center;
+    flex-wrap: wrap;
 }
 
 /*should remove underlines in the header links*/
@@ -92,23 +92,36 @@ main {
 /*The hero banner*/
 /*Goal: To have the happy employee image and description text inside the hero image*/
 .hero {
+    display: flex;
     position: relative;
     min-height: 5rem;
+
+    overflow: hidden;
 }
 
 .hero img {
-    position: absolute;
-    display : block;
+
     width: var(--box-width);
-    height: auto;
+    aspect-ratio:initial;
+    object-fit: cover;
+}
+
+@media(min-width: 900px)
+{
+    .hero img {
+
+        width: var(--box-width);
+        height: auto;
+    }
 }
 
 /*Looks good*/
 .hero h1 {
     position: absolute;
-    top : 0.75rem;
+    top : 5%;
     background-color: var(--col_secondary-background);
     width: var(--box-width);
+    height: 15%;
     font-size: 2.5rem;
     text-align: center;
     text-shadow: 0px 0px 1rem #fefefe; /*text-shadow per W3 Schools*/
@@ -122,15 +135,16 @@ main {
 .hero h2 {
     color: #fff;
     text-shadow: 1px 1px var(--col-accent2);
+    font-size: 1.25rem;
+    margin-bottom: 10px;
 }
 
 .hero article {
     position: absolute;
-    top : 4.25rem;
+    top : 25%;
     left : 5%;
     width: 90%;
-    padding: 1%;
-    
+    padding: 10px;
     background-color: var(--col-primary-background);
     clear: both;
 }
@@ -148,28 +162,32 @@ main {
 .hero article p {
     color: var(--col-main-backround);
     text-shadow: 1px 1px var(--col-accent2);
+    font-size: 0.8rem;
+    height: 100%
 }
 
 /*This should flow below the hero banner*/
 main section {
     position : relative;
-    top: 20rem;
+
 }
 
 /*The history section*/
 .history h2 {
     text-align: center;
-
+    margin-top: 20px;
 }
 
 /*Our experiences*/
 .our-experiences {
-    /**/
+    display: flex;
+    flex-direction: column;
 }
 
 .our-experiences h2
 {
     text-align: center;
+    margin-top: 20px;
 }
 
 .our-experiences > .our-experiences-images
@@ -177,13 +195,14 @@ main section {
     display: flex;
     justify-content:space-around ;
     align-items:flex-start;
+    flex-wrap: wrap;
 }
 
 .our-experiences > .our-experiences-images > figure > img {
-    
-    height: auto;
     width: var(--figure-width);
-    object-fit: contain;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+
 }
 
 .our-experiences > .our-experiences-images > figure > figcaption {
@@ -198,8 +217,7 @@ h2 {
     color: var(--col-accent1);
     text-shadow: 2px 1px var(--col-secondary);
     font-family: "Denk One", sans-serif;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+
 }
 
 p {
@@ -210,7 +228,6 @@ p {
 /*Set Footer*/
 footer{
     position : relative;
-    top : 22.5rem;
 }
 
 /*grid of footer content*/
