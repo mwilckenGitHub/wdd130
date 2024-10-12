@@ -49,7 +49,7 @@ header{
     /**/
 }
 
-
+/**/
 .grid-header-container{
     display: grid;
     grid-template-columns: minmax(var(--img-std-width),auto) 1fr; /*Set the image and links to be in a grid of 1 fractional unit*/
@@ -200,7 +200,7 @@ main section {
 
 .our-experiences > .our-experiences-images > figure > img {
     width: var(--figure-width);
-    aspect-ratio: 1/1;
+    aspect-ratio: 1/1; /*trying this out*/
     object-fit: cover;
 
 }
