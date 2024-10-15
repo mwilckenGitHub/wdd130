@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Get Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Title and h-->
+    <link href="https://fonts.googleapis.com/css2?family=Denk+One&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <!--Body-->
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+    <!--Get CSS-->
+    <link rel="stylesheet" href="styles/poll-form.css">
+
+    <title>WDD 130 | HTML Form - User Poll</title>
+</head>
+<body>
+    <!--These are the basic header and footer inputs per the "Check your understadning" sample...-->
+    <header>
+        <h1>WDD 130 | Matthew Wilcken | HTML Form - User Poll</h1>
+    </header>
+    <main>
+        <form>
+            <fieldset>
+                <legend>Contact Information</legend>
+                <!--Get contact information-->
+                <div class="form-item column2">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="John Doe">
+                </div>
+                <div class="form-item column2">
+                    <label for="useremail">Email:</label>
+                    <input type="text" id="useremail" name="useremail" placeholder="johndoe@myemail.com">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Questions</legend>
+                <div class="form-item column1">
+                    <label for="browser">What is your favorite internet browser?</label>
+                    <select name="browser" id="browser">
+                        <optgroup label="Modern" id="modern">
+                            <option value="chrome">Chrome</option>
+                            <option value="firefox">Firefox</option>
+                            <option value="safari">Safari</option>
+                            <option value="edge">Edge</option>
+                            <option value="brave">Brave</option>
+                            <option value="opera">Opera</option>
+                            <option value="other">Other</option>
+                        </optgroup>
+                        <optgroup label="Ancient" id="ancient" >
+                            <option value="explorer">Explorer</option>
+                            <option value="netscape">Netscape</option>
+                            <option value="mosaic">Mosaic</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="form-item column1">
+                    <label for="pet">Do you have a household pet?</label>
+                    <input type="checkbox" id="pet" name="pet">
+                </div>
+                <div class="form-item">
+                    <label for="feedback">List the places you have lived...</label>
+                    <textarea name="feedback" id="feedback" rows="4" placeholder="Rexburg Idaho, Seattle Washington"></textarea>
+                </div>
+            </fieldset>
+
+            <button type="submit" id="submit"><p>Submit Poll<p></button>
+        </form>
+    </main>
+    <footer>
+        <h4>&copy; | HTML Form - User Poll | Matthew Wilcken</h4>
+    </footer>
+</body>
+</html>

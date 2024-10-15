@@ -1,0 +1,171 @@
+
+/*Get globals*/
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+    
+    font-family: Sarabin, sans-serif; /*Set the general font family*/
+}
+
+:root {
+    --page_width : 512px; /*Based on sample*/
+
+}
+
+/*Set general body styles*/
+body {
+    font-size: 1rem;
+    width: var(--page_width);
+    padding: 1rem;
+    color: #484538;
+    /*background-color: #d4eac8;*/
+}
+
+header {
+    margin: 0.5rem auto;
+    width: var(--page_width);
+    color: #56a3a6;
+    text-shadow: 1px 1px #26494a;
+}
+
+h1, h4 {
+    font-family: "Denk One", sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 16pt;
+}
+
+h4 {
+    font-size: 12pt;
+}
+
+
+form {
+    width: var(--page_width);
+    margin: 0 auto;
+    padding: 1rem;
+    border: 1px solid #484538;
+    background-color: #d4eac8;;
+    border-radius: 0.5rem;
+    display: grid;
+}
+
+
+fieldset{
+    display: grid;
+    grid-gap: 0.5rem;
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid #484538;
+    border-radius: 1rem;
+}
+
+legend {
+    padding: 0.05rem;
+    font-size: 1.3em;
+}
+
+/*Left-justify these*/
+label, input, button, select, textarea {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+label {
+    text-align: center;
+    padding-right: 1rem;
+}
+
+input, select, textarea{
+    color: #000;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/*Depriciated by latter portion of Week 5 lesson. I felt that styling these in the class was better*/
+ fieldset > input[type="checkbox"]{
+    width: 22px;
+    height: 22px;
+    vertical-align: bottom;
+}
+
+label {
+    text-align: inherit;
+    padding-right: 1rem;
+}
+
+button {
+    margin: 1rem;
+    background-color: #56a3a6;
+    color: #fff;
+    
+    border-top: 2px solid lightgray;
+    border-right: 2px solid darkgray;
+    border-bottom: 2px solid darkgray;
+    border-left: 2px solid lightgray;
+
+    border-radius: 0.5rem;
+
+    font-size: larger;
+    justify-self: center;
+    min-width: 128px;
+}
+
+button:hover {
+    background-color: greenyellow;
+    color: #000;
+}
+button:active {
+    border-top: 2px solid darkgray;
+    border-right: 2px solid  lightgray;
+    border-bottom: 2px solid lightgray;
+    border-left: 2px solid darkgray;
+
+    background-color: rgb(234, 234, 234);
+    
+    /*shift text (mimics WPF user forms and older VBA user forms for a pseudo skeuomorphic appearance)*/
+    /*padding-top: 1px;
+
+    padding-left: 1px;/**/
+    
+}
+
+footer {
+    margin: 0.75rem auto 0;
+    width: var(--page_width);
+    text-align: center;
+    color: #8c9d83;
+    
+    border-top: 1px solid #8c9d83;
+    padding-top: 5px;
+}
+
+/*Classes*/
+.form-item {
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+
+.column1 {
+    grid-template-columns: 2fr 1fr;
+    margin: 0.5rem 0;
+    text-align: right;
+}
+.column1 > select {
+    /**/
+}
+.column1 > input[type="checkbox"]{
+    justify-self: left;
+    width: 22px;
+    height: 22px;
+    vertical-align: bottom;
+}
+
+.column2 {
+    grid-template-columns: 1fr 2fr;
+    text-align: right;
+}
+
