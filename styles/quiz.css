@@ -1,0 +1,94 @@
+
+/*Get globals*/
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+}
+
+/**/
+body {
+    /*Intersting width effect*/
+    max-width: 50%;
+    width: 40%;
+    min-width: 256px;
+    padding: 1rem;
+
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+
+header {
+    margin: 0.5rem auto;
+    width: var(--page_width);
+    color: #56a3a6;
+    text-shadow: 1px 1px #26494a;
+}
+
+h1, h4 {
+    font-family: "Denk One", sans-serif;
+    text-align: left;
+}
+
+h1 {
+    font-size: 16pt;
+    text-align: center;
+}
+
+h4 {
+    padding-top: 0.25rem;
+    text-decoration: overline underline; /*looks neat*/
+    
+    text-align: center;
+    font-size: 12pt;
+}
+
+button {
+    width: 94%;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem; /*forces alignment*/
+    margin-right: 0.5rem; /*unused*/
+    font-size: 12pt;
+
+    border-radius: 0.33rem;
+}
+
+/*Style classes*/
+
+.form-quiz{
+    grid-gap: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #000;
+    border-radius: 0.25rem;
+    
+    background-color: lightcyan;
+
+    max-width: 100%;
+}
+
+.frame-main-quiz{
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 0.25rem;
+    
+    padding: 0.5em;
+}
+
+.frame-main-quiz > label {
+    margin-top: 0.75rem;
+    margin-bottom: 0.25rem;
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+    font-size: 10pt;
+}
+
+.frame-main-quiz > input, select {
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.frame-main-quiz > textarea {
+    width: 100%;
+    resize: vertical;
+}

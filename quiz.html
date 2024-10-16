@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Get Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Title and h-->
+    <link href="https://fonts.googleapis.com/css2?family=Denk+One&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <!--Body-->
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+
+    <!--Get CSS-->
+    <link rel="stylesheet" href="styles/quiz.css">
+
+    <title>Quiz About HTML and CSS</title>
+</head>
+<body>
+    <header>
+        <h1>&boxbox; HTML & CSS Quiz &boxbox;</h1>
+    </header>
+    <main>
+        <form class="form-quiz">
+            <!--Get questions-->
+            <div class="frame-main-quiz">
+                <!--Text inputs-->
+                <label for="q1"><strong>1.</strong> What does the acronym HTML stand for?</label>
+                <input type="text" id="q1" name="q1">
+                <label for="q2"><strong>2.</strong> In HTML, what is the tag for inputting a standard paragraph?</label>
+                <textarea id="q2" name="q2" rows="4" cols = "50"></textarea>
+                
+                <!--Combo Box-->
+                <label for="q3"><strong>3.</strong> Which example properly demonstrates inputting an in-line CSS style?</label>
+                <select name="q3" id="q3">
+                    <option value="" selected disabled>Choose One ...</option>
+                    <option value="option1">&lt;h1 style="color:blue;text-align:center;"&gt;</option>
+                    <option value="option2">&lt;p rel="color:blue;text-align:center;"&gt;</option>
+                    <option value="option3">&lt;a href="color:blue;text-align:center;"&gt;</option>
+                    <option value="option4">&lt;div class="color:blue;text-align:center;"&gt;</option>
+                </select>
+
+                <!--Number input-->
+                <label for="q4"><strong>4.</strong> What is the best-practice, max kilobyte size for an image displayed on a webpage?</label>
+                <input type="number" id="q4" name="q4">
+            </div>
+            <div>
+                <button type="submit" id="submit">Submit Quiz</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <h4>&copy; 2024 | HTML Form - User Poll | Matthew Wilcken</h4>
+    </footer>
+</body>
+</html>
