@@ -10,7 +10,6 @@
     
 }
 
-
 /*setting up global vars*/
 :root {
     /*get colors*/
@@ -33,13 +32,22 @@
 
     /*Get box widths*/
     --box-width                 : 100%;
-
     --figure-width              : 11rem;
+
+    /*Contact Us Form*/
+    /*Get positioning for circular contact us images and captions*/
+    --margin-squeeze            : -1em;
+    --contact-us-width          : 512px;
 }
+
+/*MISC*/
+/*iframe must be styled here due to evaluation tool limitations*/
+iframe {border-radius: 1rem; border: 5px solid var(--col-accent1)}
 
 /*general sizing*/
 body {
     padding : 10px;
+    background-color: rgb(219, 228, 247);
 }
 
 /*header*/
@@ -76,7 +84,7 @@ header{
 {
     text-decoration: none;
     font-size:x-large;
-    color: #E8A635;
+    color: var(--col-accent1);
     text-shadow: 1px 1px #000000;
 }
 
@@ -212,6 +220,103 @@ main section {
     
 }
 
+/*Contact us classes*/
+.we-are-here-to-help {
+    display: flex;
+    flex-direction: column;
+}
+
+.we-are-here-to-help h2
+{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.we-are-here-to-help > .we-are-here-to-help-images
+{
+    display: flex;
+    justify-content:center;
+    align-items:flex-start;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    
+}
+
+.we-are-here-to-help > .we-are-here-to-help-images > figure > img {
+    width: var(--figure-width);
+    aspect-ratio: 1/1; /*trying this out*/
+    object-fit: cover;
+    margin-left: var(--margin-squeeze);
+    margin-right: var(--margin-squeeze);
+    border-radius: 50%; /*This is cool!*/
+    border: 5px solid var(--col-accent1);
+}
+
+/*z-index to display CEO on top*/
+.we-are-here-to-help-images > .employee1 {
+    z-index: -1;
+}
+.we-are-here-to-help-images > .employee2 {
+    z-index: -2;
+}
+.we-are-here-to-help-images > .employee3 {
+    z-index: -3;
+}
+
+.we-are-here-to-help > .we-are-here-to-help-images > figure > figcaption {
+    text-align: center;
+    
+    height: auto;
+    width: var(--figure-width);
+    margin-left: var(--margin-squeeze);
+    margin-right: var(--margin-squeeze);
+    
+}
+
+.we-are-here-to-help {
+    display: flex;
+    flex-direction: column;
+}
+
+/*the contact us form*/
+.form1{
+    max-width: var(--contact-us-width);
+    margin: auto;
+    background-color: lime;
+}
+
+.form1 fieldset{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: start;
+
+    padding: 0.75rem;
+    background-color: magenta;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    width: 100%;
+}
+
+.contact-grid > .column1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.contact-flex {
+    display: flex;
+    flex-direction: inherit;
+    width: 100%;
+}
+
+
+
+/*Other or generic CSS rules*/
 h2 {
     color: var(--col-accent1);
     text-shadow: 2px 1px var(--col-secondary);
