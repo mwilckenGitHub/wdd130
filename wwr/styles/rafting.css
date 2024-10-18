@@ -5,9 +5,6 @@
     margin : 0;
     padding : 0;
     box-sizing : border-box;
-    font-family: Sarabin, sans-serif; /*Set the general font family*/
-    
-    
 }
 
 /*setting up global vars*/
@@ -15,8 +12,8 @@
     /*get colors*/
     --col-main-backround        : #fefefe;
     --col-primary               : #0E71A5;
-    --col-primary-background    : #0E71A577;
-    --col_secondary-background  : #1b313a77;
+    --col-primary-background    : #0b4c6ecd;
+    --col_secondary-background  : #1b313abc;
     --col-secondary             : #7093A1;
     --col-accent1               : #E8A635;
     --col-accent2               : #282828;
@@ -38,6 +35,8 @@
     /*Get positioning for circular contact us images and captions*/
     --margin-squeeze            : -1em;
     --contact-us-width          : 512px;
+
+    --contact-us-input-size     : 24pt; /*Used for either height or width (both for radio buttons and checkboxes*/
 }
 
 /*MISC*/
@@ -47,7 +46,9 @@ iframe {border-radius: 1rem; border: 5px solid var(--col-accent1)}
 /*general sizing*/
 body {
     padding : 10px;
-    background-color: rgb(219, 228, 247);
+    background-color: var(--col-main-backround);
+
+    font-family: Sarabin, sans-serif; /*Set the general font family*/
 }
 
 /*header*/
@@ -67,16 +68,17 @@ header{
 .grid-header-container > img {
     display: flex;
     align-items: flex-end;
-    width: 65px;
+    width: 92px;
     
 }
 
 .grid-header-container > .grid-header-container-links
 {
-    display: flex;
-    justify-content:space-evenly;
-    align-items:center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+    margin: auto auto auto 40%;
+    align-items: center;
 }
 
 /*should remove underlines in the header links*/
@@ -84,17 +86,31 @@ header{
 {
     text-decoration: none;
     font-size:x-large;
-    color: var(--col-accent1);
-    text-shadow: 1px 1px #000000;
+    color: var(--col-main-backround);
+    text-shadow: 1px 1px #000;
 }
 
+.grid-header-container-subLink {
+    border: 2px solid white;
+    padding: 5px;
+    text-align: center;
+}
 
+.grid-header-container-subLink:hover {
+    color: #E8A635;
+    background-color: var(--col-main-backround);
+}
 
 /*main*/
 main {
     /**/
 }
 
+h1, h2, h3 {
+    font-family: "Denk One", sans-serif;
+    color: var(--col-accent1);
+    text-shadow: 1px 1px 0 var(--col-accent2);
+}
 
 /*The hero banner*/
 /*Goal: To have the happy employee image and description text inside the hero image*/
@@ -113,15 +129,6 @@ main {
     object-fit: cover;
 }
 
-@media(min-width: 900px)
-{
-    .hero img {
-
-        width: var(--box-width);
-        height: auto;
-    }
-}
-
 /*Looks good*/
 .hero h1 {
     position: absolute;
@@ -130,10 +137,10 @@ main {
     width: var(--box-width);
     height: 15%;
     font-size: 2.5rem;
+    letter-spacing: 1.5px;
     text-align: center;
-    text-shadow: 0px 0px 1rem #fefefe; /*text-shadow per W3 Schools*/
-    color: var(--col-primary);
-    font-family: "Denk One", sans-serif;
+    text-shadow: 1px 1px 0 var(--col-main-backround);
+    color: var(--col-accent1); 
 
     /*Set a margin*/
     margin-bottom : 3rem;
@@ -141,9 +148,10 @@ main {
 
 .hero h2 {
     color: #fff;
-    text-shadow: 1px 1px var(--col-accent2);
+    text-shadow: 2px 2px var(--col-accent2);
     font-size: 1.25rem;
     margin-bottom: 10px;
+    text-align: left;
 }
 
 .hero article {
@@ -168,8 +176,8 @@ main {
 /*Hero paragraph*/
 .hero article p {
     color: var(--col-main-backround);
-    text-shadow: 1px 1px var(--col-accent2);
-    font-size: 0.8rem;
+    text-shadow: 2px 2px var(--col-accent2);
+    font-size: 1rem;
     height: 100%
 }
 
@@ -182,7 +190,8 @@ main section {
 /*The history section*/
 .history h2 {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 /*Our experiences*/
@@ -194,7 +203,8 @@ main section {
 .our-experiences h2
 {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 1.0rem;
+    margin-bottom: 0.5rem;
 }
 
 .our-experiences > .our-experiences-images
@@ -220,13 +230,18 @@ main section {
     
 }
 
+
 /*Contact us classes*/
 .we-are-here-to-help {
     display: flex;
     flex-direction: column;
 }
 
-.we-are-here-to-help h2
+.we-are-here-to-help h1{
+    font-size: 2.5rem;
+}
+
+.we-are-here-to-help h1, h2
 {
     text-align: center;
     margin-top: 20px;
@@ -276,15 +291,33 @@ main section {
 .we-are-here-to-help {
     display: flex;
     flex-direction: column;
+    min-width: 512px;
 }
 
 /*the contact us form*/
 .form1{
     max-width: var(--contact-us-width);
-    margin: auto;
-    background-color: lime;
+    margin: 1rem auto 1rem auto;
+    padding: 1rem;
+    background-color: #e4eef2;
+    color: #000000;
+
+    border: 2px solid #000;
+    border-radius: 5px;
+
+    /*Use a serifed font to differentiate*/
+    font-family: 'Times New Roman', Times, serif;
 }
 
+/*Use a monospaced font in the input fields*/
+.form1 input, textarea{
+    font-family: 'Courier New', Courier, monospace;
+}
+.form1 input {
+    height: 24px;
+}
+
+/*place all elements in the fieldset into a flex column*/
 .form1 fieldset{
     display: flex;
     flex-direction: column;
@@ -292,41 +325,91 @@ main section {
     align-items: start;
 
     padding: 0.75rem;
-    background-color: magenta;
+
+    
+    border: none;
 }
 
+/*used for grid elements*/
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 10px;
+    row-gap: 0.25rem;
     width: 100%;
 }
 
-.contact-grid > .column1 {
+/*align the first and last name side-by-side (this matches a nice contact us page sample)*/
+.contact-grid > .contact-name {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 }
 
+/*used for elements best indexed via flex (email)*/
 .contact-flex {
     display: flex;
     flex-direction: inherit;
     width: 100%;
 }
-
-
-
-/*Other or generic CSS rules*/
-h2 {
-    color: var(--col-accent1);
-    text-shadow: 2px 1px var(--col-secondary);
-    font-family: "Denk One", sans-serif;
-
+.contact-email {
+    margin-top: 0.5em;
+    margin-bottom : 0.5em;
 }
 
-p {
-    color : var(--col_p);
-    font-family: Sarabin, sans-serif;
+.contact-reason{
+    padding-bottom: 0.25rem;
+}
+
+/*Radio buttons, checkboxes*/
+.contact-reason, .contact-newslestter-checkbox {
+    display: grid;
+    grid-template-columns: 1fr 100%;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+.contact-reason input[type="radio"], .contact-newslestter-checkbox input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+}
+
+/*text field*/
+.contact-website-suggestion {
+    grid-template-columns: 1fr; /*expand this column*/
+    margin-bottom: 0.5rem;
+}
+
+.contact-website-suggestion textarea {
+    resize: vertical;
+}
+
+/*submit button*/
+.form1 button{
+    
+    display: inherit;
+    margin: auto;
+    justify-content: center;
+    font-size: medium;
+    padding: 0.25rem;
+}
+
+.form1 button:hover {
+    color: #E8A635;
+    background-color: var(--col-main-backround);
+    text-shadow: 1px 1px 0 var(--col-accent2);
+}
+
+.company-contact {
+    margin: .5rem auto 1rem auto;
+    text-align: center;
+}
+
+.company-contact h2 {
+    padding: 0.33rem;
+}
+
+.company-contact h3 {
+    padding: 0.33rem;
 }
 
 /*Set Footer*/
@@ -337,9 +420,10 @@ footer{
 /*grid of footer content*/
 .grid-footer-container {
     display: grid;
-
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1em;
+
+    margin-top: 1rem;
 }
 
 /*footer column 2*/

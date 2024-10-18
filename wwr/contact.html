@@ -39,7 +39,7 @@
     <main>
         <!--Display our employees-->
         <section class="we-are-here-to-help">
-            <h2>We're Here To Help</h2>
+            <h1>We're Here To Help</h1>
             <div class="we-are-here-to-help-images">
                 <!--Get a z-index-->
                 <figure class="employee1">
@@ -59,42 +59,53 @@
 
         <!--Get user input-->
         <section>
+            <h1> </h1>
             <div class="form1">
                 <form>
                     <fieldset>
                         <legend>We're Happy To Hear From You!</legend>
+                        <!--Get first and last name and display as a grid-->
                         <div class="contact-grid">
-                            <!--Get first and last name-->
-                            <div class="contact-grid column1">
+                            <div class="contact-grid contact-name">
                                 <label for="name-first">First Name:</label>
                                 <input type="text" id="name-first" name="name-first">
                             </div>
-                            <div class="contact-grid column1">
+                            <div class="contact-grid contact-name">
                                 <label for="name-last">Last Name:</label>
                                 <input type="text" id="name-last" name="name-last">
                             </div>
                         </div>
-                        <div class="contact-flex">
-                            <!--Get email-->
+
+                        <!--Get email and display as a flex-->
+                        <div class="contact-flex contact-email">
                             <label for="useremail">Email:</label>
                             <input type="text" id="useremail" name="useremail" placeholder="johndoe@myemail.com">
                         </div>
-
-                        <!--Get reason-->
-                        <!--Need A new grid here for the radio buttons-->
-                        <p>Let us know why you're reaching out to use today:</p>
-                        <input type="radio" id="general-inquiry" name="inquiry-purpose" value="HTML">
-                        <label for="general-inquiry">General Inquiry</label><br>
-                        <input type="radio" id="reservation-question" name="inquiry-purpose" value="CSS">
-                        <label for="reservation-question">Reservation Question</label><br>
-                        <input type="radio" id="website-suggestion" name="inquiry-purpose" value="JavaScript">
-                        <label for="website-suggestion">Website Suggestion</label>
-
-                        <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>
                         
-                        <!--Get monthly newsletter-->
-                        <label for="newsletter">Please subscribe me to the monthly newsletter</label>
-                        <input type="checkbox" name="newsletter" id="newsletter" checked> <!--Create as checked-->
+                        <!--Get Radio buttons and display as a grid-->
+                        <p>Let us know why you're reaching out to us today.</p>
+                        <div class="contact-grid contact-reason">
+                            <!--Get reason-->
+                            <!--Need A new grid here for the radio buttons-->
+                            <input type="radio" id="general-inquiry" name="inquiry-purpose" value="HTML">
+                            <label for="general-inquiry">General Inquiry</label>
+                            <input type="radio" id="reservation-question" name="inquiry-purpose" value="CSS">
+                            <label for="reservation-question">Reservation Question</label>
+                            <input type="radio" id="website-suggestion" name="inquiry-purpose" value="JavaScript">
+                            <label for="website-suggestion">Website Suggestion</label>
+                        </div>
+                        
+                        <!--Get a website suggestion and display as a flex-->
+                        <div class="contact-grid contact-website-suggestion">
+                            <textarea id="w3review" name="w3review" rows="4" cols="80" placeholder="Type your contact explantion/inquiry here."></textarea>
+                        </div>
+                        
+                        <!--Get newsletter checkbox and display as inline-->
+                        <div class="contact-grid contact-newslestter-checkbox"> 
+                            <input type="checkbox" name="newsletter" id="newsletter" checked> <!--Create as checked-->
+                            <label for="newsletter">Please subscribe me to the monthly newsletter</label>
+                            
+                        </div>
                     </fieldset>
                     <!--Get submit button-->
                     <button type="submit" id="submit">Submit</button>
@@ -105,37 +116,7 @@
         <!--Display company contact information-->
         <section>
             <div class="company-contact">
-                <!--tried a table-->
-                <!--<table>
-                    <thead>
-                        <tr>
-                            <th scope="row" colspan="2">Company Information</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row"></th>
-                            <td><p>Rafting Momentum</p>
-                                <p>123 W Deloney Ave</p>
-                                <p>Jackson, WY. 83001</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">&phone;</th>
-                            <td>(307) 342-3869</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Fax</th>
-                            <td>(307) 342-4269</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">email</th>
-                            <td><a href= "mailto: inquiries@rafting-momentum.com">inquiries@rafting-momentum.com</a></td>
-                        </tr>
-                    </tbody>
-
-                </table>-->
-                <h3></h3>
+                <h2>Company Information</h2>
                 <div class="company-contact-street">
                     <h4>Street Address:</h4>
                     <p>Rafting Momentum</p>
@@ -143,14 +124,14 @@
                     <p>Jackson, WY. 83001</p>    
                 </div>
                 <div class="company-contact-phone-email">
-                    <p>&phone;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(307) 342-3869</p>
-                    <p>fax:&nbsp;&nbsp;&nbsp;&nbsp;(307) 342-4269</p>
-                    <p>email:<a href= "mailto: inquiries@rafting-momentum.com">inquiries@rafting-momentum.com</a></p>
+                    <p>&phone; (307) 342-3869</p>
+                    <p>Fax: (307) 342-4269</p>
+                    <p>email: <a href="mailto:inquiries@rafting-momentum.com"> inquiries@rafting-momentum.com </a></p>
                 </div>
                 <div>
                     <!--Map embedded per instructions; Some inline CSS used here... BAH! Can't do that...-->
-                    <h4>Google Map:</h4>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1505.9455414011277!2d-110.76432405613654!3d43.480755975937406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53531a67f6ef9809%3A0xa4eb5077167d56c7!2s123%20W%20Deloney%20Ave%2C%20Jackson%2C%20WY%2083001!5e1!3m2!1sen!2sus!4v1729052842906!5m2!1sen!2sus" width="120" height="104" allowfullscreen="True" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <h3>Find Us On The Map!</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1505.9455414011277!2d-110.76432405613654!3d43.480755975937406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53531a67f6ef9809%3A0xa4eb5077167d56c7!2s123%20W%20Deloney%20Ave%2C%20Jackson%2C%20WY%2083001!5e1!3m2!1sen!2sus!4v1729052842906!5m2!1sen!2sus" width="120" height="104" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>        
@@ -160,6 +141,7 @@
         <div class="grid-footer-container">
             <p>&copy; 2024 Rafting Momentum | Matthew Wilcken</p>
             <nav class="socialLinks">
+                <a href="https://app.moqups.com/nihE8gw4k4ZnVgCxmiGmcsVRtq34bmJz/edit/page/ad64222d5">Wireframe</a>
                 <a href="https://www.facebook.com/"><img src="images/facebook-icon.png" alt="Facebook"></a>
                 <a href="https://x.com/home"><img src="images/x-icon.png" alt="X"></a>
                 <a href="https://www.yahoo.com/"><img src="images/yahoo-icon.png" alt="Yahoo"></a>
