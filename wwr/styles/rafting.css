@@ -12,8 +12,8 @@
     /*get colors*/
     --col-main-backround        : #fefefe;
     --col-primary               : #0E71A5;
-    --col-primary-background    : #0b4c6ecd;
-    --col_secondary-background  : #1b313abc;
+    --col-primary-background    : #083249df;
+    --col_secondary-background  : #010d11a2;
     --col-secondary             : #7093A1;
     --col-accent1               : #E8A635;
     --col-accent2               : #282828;
@@ -46,9 +46,11 @@ iframe {border-radius: 1rem; border: 5px solid var(--col-accent1)}
 /*general sizing*/
 body {
     padding : 10px;
-    background-color: var(--col-main-backround);
+    background-color: #f4f7f9;
 
     font-family: Sarabin, sans-serif; /*Set the general font family*/
+
+    font-size: 13pt;
 }
 
 /*header*/
@@ -108,8 +110,8 @@ main {
 
 h1, h2, h3 {
     font-family: "Denk One", sans-serif;
-    color: var(--col-accent1);
-    text-shadow: 1px 1px 0 var(--col-accent2);
+    color: var(--col-accent2);
+    text-shadow: 1px 1px 0 var(--col-primary);
 }
 
 /*The hero banner*/
@@ -139,8 +141,8 @@ h1, h2, h3 {
     font-size: 2.5rem;
     letter-spacing: 1.5px;
     text-align: center;
-    text-shadow: 1px 1px 0 var(--col-main-backround);
-    color: var(--col-accent1); 
+    text-shadow: 1px 1px 0 var(--col-accent2);
+    color: var(--col-main-backround); 
 
     /*Set a margin*/
     margin-bottom : 3rem;
@@ -148,7 +150,7 @@ h1, h2, h3 {
 
 .hero h2 {
     color: #fff;
-    text-shadow: 2px 2px var(--col-accent2);
+    text-shadow: 1px 1px var(--col-accent2);
     font-size: 1.25rem;
     margin-bottom: 10px;
     text-align: left;
@@ -176,9 +178,17 @@ h1, h2, h3 {
 /*Hero paragraph*/
 .hero article p {
     color: var(--col-main-backround);
-    text-shadow: 2px 2px var(--col-accent2);
-    font-size: 1rem;
-    height: 100%
+    text-shadow: 1px 1px var(--col-accent2);
+    font-size: 13pt;
+    width: 75%;
+    height: 100%;
+    overflow:hidden;
+    
+    /*scroll-behavior: auto;
+    scroll-margin:initial;
+    overflow-y: scroll;
+    overflow-x: hidden;/**/
+
 }
 
 /*This should flow below the hero banner*/
