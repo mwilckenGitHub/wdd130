@@ -29,7 +29,7 @@
 
     /*Get box widths*/
     --box-width                 : 100%;
-    --figure-width              : 11rem;
+    --figure-width              : 13rem;
 
     /*Contact Us Form*/
     /*Get positioning for circular contact us images and captions*/
@@ -117,50 +117,51 @@ h1, h2, h3 {
 /*The hero banner*/
 /*Goal: To have the happy employee image and description text inside the hero image*/
 .hero {
-    display: flex;
     position: relative;
-    min-height: 5rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    overflow: scroll; /*scroll bars work!*/
 
-    overflow: hidden;
+    background-color: var(--col-primary);
 }
 
 .hero img {
-
     width: var(--box-width);
-    aspect-ratio:initial;
-    object-fit: cover;
+    height: auto;
 }
 
 /*Looks good*/
 .hero h1 {
     position: absolute;
-    top : 5%;
+    top : 20px;
     background-color: var(--col_secondary-background);
     width: var(--box-width);
-    height: 15%;
-    font-size: 2.5rem;
+    height: auto;
+    font-size: 3rem;
+    min-height: 50px;
     letter-spacing: 1.5px;
     text-align: center;
     text-shadow: 1px 1px 0 var(--col-accent2);
     color: var(--col-main-backround); 
-
-    /*Set a margin*/
-    margin-bottom : 3rem;
+    z-index: 1;
 }
 
 .hero h2 {
     color: #fff;
     text-shadow: 1px 1px var(--col-accent2);
-    font-size: 1.25rem;
+    font-size: 150%;
     margin-bottom: 10px;
     text-align: left;
 }
 
 .hero article {
     position: absolute;
-    top : 25%;
+    top : 100px;
     left : 5%;
     width: 90%;
+    height: auto;
     padding: 10px;
     background-color: var(--col-primary-background);
     clear: both;
@@ -181,14 +182,6 @@ h1, h2, h3 {
     text-shadow: 1px 1px var(--col-accent2);
     font-size: 13pt;
     width: 75%;
-    height: 100%;
-    overflow:hidden;
-    
-    /*scroll-behavior: auto;
-    scroll-margin:initial;
-    overflow-y: scroll;
-    overflow-x: hidden;/**/
-
 }
 
 /*This should flow below the hero banner*/
@@ -245,6 +238,7 @@ main section {
 .we-are-here-to-help {
     display: flex;
     flex-direction: column;
+    min-width: 512px;
 }
 
 .we-are-here-to-help h1{
@@ -295,14 +289,9 @@ main section {
     width: var(--figure-width);
     margin-left: var(--margin-squeeze);
     margin-right: var(--margin-squeeze);
-    
 }
 
-.we-are-here-to-help {
-    display: flex;
-    flex-direction: column;
-    min-width: 512px;
-}
+
 
 /*the contact us form*/
 .form1{
