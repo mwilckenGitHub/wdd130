@@ -71,7 +71,6 @@ header{
     display: flex;
     align-items: flex-end;
     width: 92px;
-    
 }
 
 .grid-header-container > .grid-header-container-links
@@ -123,7 +122,8 @@ h1, h2, h3 {
     flex-wrap: wrap;
     
     overflow: scroll; /*scroll bars work!*/
-
+    overflow-x: hidden;
+    scroll-behavior:smooth;
     background-color: var(--col-primary);
 }
 
