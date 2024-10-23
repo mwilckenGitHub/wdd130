@@ -23,7 +23,7 @@
 
     /*get layout*/
     /*Trip container*/
-    --img-trip-container-width  : 25em;
+    --img-trip-container-width  : 27.5em;
     --img-journies-container-width : 20rem;
 
     /*img*/
@@ -114,20 +114,30 @@ header{
 }
 
 /*submit button*/
-.trip-container-images a, .reserve-your-journey a {
+ 
+
+.trip-container-images a, .reserve-your-journey a, .questions-contact-us a {
     text-decoration: none;
     margin: auto;
+    text-align: center;
+    color: var(--col-main-backround);
 }
-.trip-container-images button, .reserve-your-journey button, .questions-contact-us button{
+.trip-container-images a:link, .reserve-your-journey a:link, .questions-contact-us a:link{
     display: inherit;
     width: 21.75rem; /*Matches width of images*/
     font-size: medium;
     padding: 0.25rem;
+    border: 1px solid black;
+    background-color: var(--col-primary);
     border-radius: 5px;
+    margin: auto;
+    display: inline-block;
+    
 }
 
-.trip-container-images button:hover, .reserve-your-journey button:hover, .questions-contact-us button:hover{
+.trip-container-images a:hover, .reserve-your-journey a:hover, .questions-contact-us a:hover{
     color: #E8A635;
+    border: 1px solid black;
     background-color: var(--col-main-backround);
     text-shadow: 1px 1px 0 var(--col-accent2);
 }
@@ -199,7 +209,6 @@ header{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    
 }
 
 .separator-line{
@@ -220,16 +229,8 @@ header{
     margin-left: 0.5rem;
     margin-right: 0.5rem;
     width: var(--img-journies-container-width);
-    height: auto;
-}
-.figures-wyoming p,
-.figures-idaho p
-{
-    margin-top: 0.75rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    width: var(--img-journies-container-width);
-    height: 1em;
+
+    height: 5rem;
 }
 .figures-wyoming figure,
 .figures-idaho figure
@@ -606,6 +607,7 @@ main section {
     justify-content: center;
     font-size: medium;
     padding: 0.25rem;
+    min-width: 120px;
 }
 
 .form1 button:hover{
