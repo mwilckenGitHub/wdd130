@@ -1,0 +1,153 @@
+<!--Page created 9/30/2024-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Page about the trips offered at Rafting Momentum.">
+    <meta name="author" content="Matthew Wilcken">
+    <meta name="title" content="Trips">
+    
+    <!--Get Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Title and h-->
+    <link href="https://fonts.googleapis.com/css2?family=Denk+One&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <!--Body-->
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        
+    <title>Rafting Momentum Trips Page</title>
+    
+    <!--Get CSS-->
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body>
+    <!--Get Header-->
+    <header>
+        <!--Get a div element for the header-->
+        <div class="grid-header-container">
+            <img src="images/rafting-momentum.jpg" alt="Rafting site logo" width="200">
+            <!--Get class for the sub-grids-->
+            <nav class="grid-header-container-links">
+                <a href="index.html"    class="grid-header-container-subLink">Main Page</a>
+                <a href="about.html"    class="grid-header-container-subLink">About Us</a>
+                <a href="trips.html"    class="grid-header-container-subLink">Trip Planning</a>
+                <a href="contact.html"  class="grid-header-container-subLink">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!--Get Hero Banner-->
+        <!--To Update-->
+        <div class="hero">
+            <img src="images/salmon-kayak-banner2.jpg" alt="Salmon Kayak Banner">
+            <h1>Rafting Momentum</h1>
+            <article>
+                <!--Had to move the image before the h2-->
+                <img src="images/staff-xavier-fa'atiu.jpg" alt="Our Employees" width="200">
+                <h2>Journey With Us!</h2><!--I had to add this because the Validation tool was saying that it needed a header within an article tag...-->
+                <p class="about-us-p">Hi! I'm Xavier. We here at Rafting Momentum love taking families on safe and exciting adventures down the Snake River in Wyoming and Idaho. Though our trips are always being updated in our off-season, as of October 1<SUP>st</SUP> we are presently booking for 3 exciting journeys along the upper Snake River in Wyoming and Idaho. See 'Our Journeys' for details!</p>
+            </article>
+        </div>
+        
+        <!--Get Locales-->
+        <div class="horizontal-border"></div>
+        <div class="journies-container">
+            <div class="titles-grid">
+                <h2>Our Journeys*</h2>
+            </div>
+            
+            <div  class="titles-wyoming">
+                <h2>Wyoming</h2>
+            </div>
+            <div class="figures-wyoming">
+                
+                <figure>
+                    <img src="images/moran-to-emily-stevens.jpg" alt="moran to emily stevens" >
+                    <figcaption>Moran to Emily Stevens<br>(5 hours)</figcaption>
+                    <p>Great excursion for the whole family. 3 break points and meals are provided.</p>
+                </figure>
+                <figure>
+                    <img src="images/moran-to-palisades.jpg" alt="moran to palisades" >
+                    <figcaption>Moran to Palisades<br>(Day Trip)</figcaption>
+                    <p>18+ participants only. Moran to the Palisades reservoir is out premire rafting experince. Meals are provided and there are 6 break points.</p>
+                </figure>
+            </div>
+            <div class="separator-line"></div>
+            <div  class="titles-idaho">
+                <h2>Idaho</h2>
+            </div>
+            <div class="figures-idaho">
+                
+                <figure>
+                    <img src="images/riverside-campground-to-south-fork-lodge.jpg" alt="reiverside campground to south fork lodge" >
+                    <figcaption>Riverside Campground to South Fork Lodge<br>(Day Trip)</figcaption>
+                    <p>18+ participants only. Requires 1-month advance notice. Meals are provided and there are 5 break points. Participants stay at the renowned South Fork Lodge.</p>
+                </figure>
+            </div>
+            
+        </div>
+        
+        <div class="horizontal-border"><p>*Avilable listings subject to change in our off-season. Any bookings which change after being finalized will receive a full refund.</p></div>
+        <!--Does the table look good?-->
+        <br>
+        <h2>Pricing Table</h2>
+        <section>
+            <table>
+                <tr>
+                    <th>State</th>
+                    <th>Route</th>
+                    <th>Age Range</th>
+                    <th>Availability</th>
+                    <th>Cost Per Person</th>
+                    <th>Class</th>
+                </tr>
+                <tr>
+                    <td>Wyoming</td>
+                    <td>Moran to Emily Stevens</td>
+                    <td>8 and up</td>
+                    <td>May 31 - Oct 15</td>
+                    <td>$49.99</td>
+                    <td>Class I</td>
+                </tr>
+                <tr>
+                    <td>Wyoming</td>
+                    <td>Moran to Palisades</td>
+                    <td>18+</td>
+                    <td>May 31 - Oct 15</td>
+                    <td>$129.99</td>
+                    <td>Class IV</td>
+                </tr>
+                <tr>
+                    <td>Idaho</td>
+                    <td>Riverside Lodge to South Fork Lodge</td>
+                    <td>18+</td>
+                    <td>May 31 - Oct 15</td>
+                    <td>$599.99</td>
+                    <td>Class II</td>
+                </tr>
+            </table>
+        </section>
+        
+        <!--TODO-->
+        <section class="questions-contact-us">
+            <h2>Questions?</h2>
+            <p>We'd love to hear from you!</p>
+            <!--Get submit button-->
+            <a href="contact.html"><button>Contact Us</button></a>
+        </section>
+    </main>
+    <footer>
+        <div class="grid-footer-container">
+            <p>&copy; 2024 Rafting Momentum | Matthew Wilcken</p>
+            <nav class="socialLinks">
+                <a href="images/trips-wireframe.PNG">Wireframe</a>
+                <a href="https://www.facebook.com/"><img src="images/facebook-icon.png" alt="Facebook"></a>
+                <a href="https://x.com/home"><img src="images/x-icon.png" alt="X"></a>
+                <a href="https://www.yahoo.com/"><img src="images/yahoo-icon.png" alt="Yahoo"></a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

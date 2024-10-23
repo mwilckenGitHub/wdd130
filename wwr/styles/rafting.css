@@ -22,6 +22,10 @@
     --col_p                     : #000;
 
     /*get layout*/
+    /*Trip container*/
+    --img-trip-container-width  : 25em;
+    --img-journies-container-width : 20rem;
+
     /*img*/
     --img-std-width             : 150px;
     --img-aside-width           : 200px;
@@ -59,6 +63,217 @@ header{
     /**/
 }
 
+/*Main Page*/
+
+/*Hero paragraph*/
+.hero .index-p {
+    position: absolute;
+    top : 10rem;
+    left : 5%;
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    background-image: radial-gradient(var(--col-primary-background), #083249bc);
+    clear: both;
+
+    color: var(--col-main-backround);
+    text-shadow: 1px 1px var(--col-accent2);
+    font-size: 13pt;
+    border-radius: 1rem;
+    padding: 3rem;
+
+    text-align: justify;
+}
+
+/*Reserve Your Journey*/
+.reserve-your-journey {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+.reserve-your-journey p{
+    text-align: center;
+    margin: auto;
+    max-width: 66%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/*Trip container*/
+.trip-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 75%;
+    margin: auto;
+    margin-top: 1.5rem;
+    
+    border-top: 2px solid var(--col-primary);
+}
+
+/*submit button*/
+.trip-container-images a, .reserve-your-journey a {
+    text-decoration: none;
+    margin: auto;
+}
+.trip-container-images button, .reserve-your-journey button, .questions-contact-us button{
+    display: inherit;
+    width: 21.75rem; /*Matches width of images*/
+    font-size: medium;
+    padding: 0.25rem;
+    border-radius: 5px;
+}
+
+.trip-container-images button:hover, .reserve-your-journey button:hover, .questions-contact-us button:hover{
+    color: #E8A635;
+    background-color: var(--col-main-backround);
+    text-shadow: 1px 1px 0 var(--col-accent2);
+}
+
+.trip-container h2
+{
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+
+.trip-container-images
+{
+    display: flex;
+    justify-content:space-around ;
+    align-items:flex-start;
+    flex-wrap: wrap;
+}
+
+.trip-container figure > img {
+    width: var(--img-trip-container-width);
+    aspect-ratio: 1/1; /*trying this out*/
+    object-fit: cover;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+
+}
+
+/*Trip Planning*/
+
+.horizontal-border{
+    
+    border-top: 2px solid var(--col-primary);
+    width: 55%;
+    text-align: center;
+    margin: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.journies-container {
+    display: grid; 
+    grid-template-areas: 
+    'titles-grid titles-grid titles-grid titles-grid'
+    'titles-wyoming titles-wyoming separator-line titles-idaho'
+    'figures-wyoming figures-wyoming separator-line figures-idaho'
+    'figures-wyoming figures-wyoming separator-line figures-idaho'; 
+    justify-content: center;
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
+}
+
+.titles-grid{
+    grid-area: titles-grid;
+    justify-content: center;
+    font-size: x-large;
+}
+.titles-wyoming{ grid-area: titles-wyoming; } 
+.titles-idaho{ grid-area: titles-idaho; }
+.figures-wyoming{
+    grid-area: figures-wyoming;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.figures-idaho{
+    grid-area: figures-idaho;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.separator-line{
+    grid-area: separator-line;
+    border: 1px solid var(--col-primary);
+}
+
+.figures-wyoming img,
+.figures-idaho img {
+    width: var(--img-journies-container-width);
+    aspect-ratio: 1/1;
+    object-fit: cover;    
+    margin: 0.5rem;
+}
+.figures-wyoming figcaption,
+.figures-idaho figcaption
+{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    width: var(--img-journies-container-width);
+    height: auto;
+}
+.figures-wyoming p,
+.figures-idaho p
+{
+    margin-top: 0.75rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    width: var(--img-journies-container-width);
+    height: 1em;
+}
+.figures-wyoming figure,
+.figures-idaho figure
+{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 2px;
+    padding: 5px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+/*TODO*/
+/*Continue setting up the table*/
+table, th, tr, td {
+    border:1px solid black;
+    table-layout: auto;
+    column-width: 10rem;
+    width: auto;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    text-align: left;
+}
+
+th, td {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.questions-contact-us{
+    text-align: center;
+    padding: 0.5rem;
+}
+.questions-contact-us p {
+    margin: 0.5rem;
+}
+.questions-contact-us a {
+    text-decoration: none;
+}
+.questions-contact-us button{
+    margin: auto;
+}
+
+/*About Us*/
 /**/
 .grid-header-container{
     display: grid;
@@ -178,7 +393,7 @@ h1, h2, h3 {
 }/**/
 
 /*Hero paragraph*/
-.hero article p {
+.hero article .about-us-p {
     color: var(--col-main-backround);
     text-shadow: 1px 1px var(--col-accent2);
     font-size: 13pt;
@@ -352,7 +567,7 @@ main section {
     flex-direction: inherit;
     width: 100%;
 }
-.contact-email {
+.contact-email, .contact-name {
     margin-top: 0.5em;
     margin-bottom : 0.5em;
 }
@@ -393,7 +608,7 @@ main section {
     padding: 0.25rem;
 }
 
-.form1 button:hover {
+.form1 button:hover{
     color: #E8A635;
     background-color: var(--col-main-backround);
     text-shadow: 1px 1px 0 var(--col-accent2);

@@ -1,0 +1,134 @@
+<!--Page created 9/30/2024-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="The main page for Rafting Momentum.">
+    <meta name="author" content="Matthew Wilcken">
+    <meta name="title" content="Index">
+    
+    <!--Get Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Title and h-->
+    <link href="https://fonts.googleapis.com/css2?family=Denk+One&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <!--Body-->
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        
+    <title>Rafting Momentum Main Page</title>
+    
+    <!--Get CSS-->
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body>
+    <!--Get Header-->
+    <header>
+        <!--Get a div element for the header-->
+        <div class="grid-header-container">
+            <img src="images/rafting-momentum.jpg" alt="Rafting site logo" width="200">
+            <!--Get class for the sub-grids-->
+            <nav class="grid-header-container-links">
+                <a href="index.html"    class="grid-header-container-subLink">Main Page</a>
+                <a href="about.html"    class="grid-header-container-subLink">About Us</a>
+                <a href="trips.html"    class="grid-header-container-subLink">Trip Planning</a>
+                <a href="contact.html"  class="grid-header-container-subLink">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!--Get Hero Banner-->
+        <!--To Update-->
+        <div class="hero">
+            <img src="images/salmon-kayak-banner2.jpg" alt="Salmon Kayak Banner">
+            <h1>Rafting Momentum</h1>
+            <!--TODO Set this up To display correctly-->
+            <p class="index-p">Rafting Momentum is committed to your experience; your "momentum." Rafting Momentum is the go-to river rafting experience for thousands of customers. We offer world-class guided rafting experiences along the Snake River and its tributaries ranging from Jackson Hole, Wyoming to Idaho Falls, Idaho.</p>
+
+        </div>
+        
+        <section class="reserve-your-journey">
+            <h2>Your Journey Starts Here</h2>
+            <p>Reservations can be made by pressing the button below or via phone at (307) 342-3869. Reservations made online require a minimum of 5 business days from today's date. Some dates are unavailable or are fully booked.</p>
+            <!--Get submit button-->
+            <a href="trips.html"><button>Reserve Your Journey</button></a>
+        </section>
+
+        <!--Get Locales-->
+        <!--Wyoming-->
+        <section class="trip-container">
+            <h2>Wyoming</h2>
+            <div class="trip-container-images">
+                <figure>
+                    <figcaption>Moran to Emily Stevens<br>(5 hours)</figcaption>
+                    <img src="images/moran-to-emily-stevens.jpg" alt="moran to emily stevens" ><br>
+                    <a href="trips.html"><button>Reserve</button></a>
+                </figure>
+                <figure>
+                    <figcaption>Moran to Palisades<br>(Day Trip)</figcaption>
+                    <img src="images/moran-to-palisades.jpg" alt="moran to palisades" ><br>
+                    <a href="trips.html"><button>Reserve</button></a>
+                </figure>
+            </div>
+        </section>
+        <!--Idaho-->
+        <section class="trip-container">
+            <h2>Idaho</h2>
+            <div class="trip-container-images">
+                <figure>
+                    <figcaption>Riverside Campground to South Fork Lodge<br>(Day Trip)</figcaption>
+                    <img src="images/riverside-campground-to-south-fork-lodge.jpg" alt="reiverside campground to south fork lodge" ><br>
+                    <a href="trips.html"><button>Reserve</button></a>
+                </figure>
+            </div>
+        </section>
+
+        <!--Get user input for newsletter-->
+        <section>
+            <h1> </h1>
+            <div class="form1">
+                <form>
+                    <fieldset>
+                        <legend>Sign Up For The Newsletter!</legend>
+                        <!--Get first and last name and display as a grid-->
+                        <div class="contact-flex">
+                            <div class="contact-flex contact-name">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name">
+                            </div>
+                        </div>
+
+                        <!--Get email and display as a flex-->
+                        <div class="contact-flex contact-email">
+                            <label for="useremail">Email:</label>
+                            <input type="text" id="useremail" name="useremail" placeholder="johndoe@myemail.com">
+                        </div>
+                        
+                        <!--Get newsletter checkbox and display as inline-->
+                        <div class="contact-grid contact-newslestter-checkbox"> 
+                            <input type="checkbox" name="newsletter" id="newsletter" checked> <!--Create as checked-->
+                            <label for="newsletter">Please subscribe me to the monthly newsletter</label>
+                            
+                        </div>
+                    </fieldset>
+                    <!--Get submit button-->
+                    <button type="submit" id="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div class="grid-footer-container">
+            <p>&copy; 2024 Rafting Momentum | Matthew Wilcken</p>
+            <nav class="socialLinks">
+                <a href="https://app.moqups.com/VGhXrG66eLmhitmoqZnAIj93Pklnhhtl/edit/page/ad64222d5">Wireframe</a>
+                <a href="https://www.facebook.com/"><img src="images/facebook-icon.png" alt="Facebook"></a>
+                <a href="https://x.com/home"><img src="images/x-icon.png" alt="X"></a>
+                <a href="https://www.yahoo.com/"><img src="images/yahoo-icon.png" alt="Yahoo"></a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
