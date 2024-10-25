@@ -103,28 +103,82 @@ header{
 
 /*Trip container*/
 .trip-container {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+    display: grid; 
+    grid-template-areas: 
+    'main-titles-grid main-titles-grid main-titles-grid'
+    'call-to-action call-to-action call-to-action'
+    'titles-wyoming titles-wyoming titles-wyoming'
+    'figures-wyoming figures-wyoming figures-wyoming'
+    'titles-idaho titles-idaho titles-idaho'
+    'figures-idaho figures-idaho figures-idaho'; 
     max-width: 75%;
     margin: auto;
     margin-top: 1.5rem;
-    
-    border-top: 2px solid var(--col-primary);
+    margin-bottom: 0.5rem;
 }
 
-/*submit button*/
- 
+/*Grid title and call to action*/
+.trip-container-main-title {
+    grid-area: main-titles-grid;
+}
+.trip-container-main-title-information {
+    grid-area: call-to-action;
+    text-align: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--col-primary);
+}
 
-.trip-container-images a, .reserve-your-journey a, .questions-contact-us a {
+.trip-container-wyoming-title{
+    grid-area: titles-wyoming;
+}
+.trip-container-wyoming-figures {
+    grid-area: figures-wyoming;
+    text-align: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--col-primary);
+}
+
+.trip-container-idaho-title{
+    grid-area: titles-idaho;
+}
+.trip-container-idaho-figures{
+    grid-area: figures-idaho;
+    text-align: center;
+
+}
+    
+.trip-container-wyoming-figures,
+.trip-container-idaho-figures{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+.trip-container-wyoming-figures img,
+.trip-container-idaho-figures img {
+    width: 22rem;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin: 0.5rem;
+}
+
+/*submit buttons*/
+.trip-container-wyoming-figures a,
+.trip-container-idaho-figures a,
+.trip-container-main-title-information a,
+.questions-contact-us a {
     text-decoration: none;
     margin: auto;
     text-align: center;
     color: var(--col-main-backround);
 }
-.trip-container-images a:link, .reserve-your-journey a:link, .questions-contact-us a:link{
+
+.trip-container-wyoming-figures a:link,
+.trip-container-idaho-figures a:link,
+.trip-container-main-title-information a:link,
+.questions-contact-us a:link{
     display: inherit;
-    width: 21.75rem; /*Matches width of images*/
+    width: 21.75rem;
     font-size: medium;
     padding: 0.25rem;
     border: 1px solid black;
@@ -132,16 +186,18 @@ header{
     border-radius: 5px;
     margin: auto;
     display: inline-block;
-    
 }
 
-.trip-container-images a:hover, .reserve-your-journey a:hover, .questions-contact-us a:hover{
+.trip-container-wyoming-figures a:hover,
+.trip-container-idaho-figures a:hover,
+.trip-container-main-title-information a:hover,
+.questions-contact-us a:hover{
     color: #E8A635;
     border: 1px solid black;
     background-color: var(--col-main-backround);
     text-shadow: 1px 1px 0 var(--col-accent2);
 }
-
+/**/
 .trip-container h2
 {
     text-align: center;
@@ -150,22 +206,8 @@ header{
 }
 
 
-.trip-container-images
-{
-    display: flex;
-    justify-content:space-around ;
-    align-items:flex-start;
-    flex-wrap: wrap;
-}
 
-.trip-container figure > img {
-    width: var(--img-trip-container-width);
-    aspect-ratio: 1/1; /*trying this out*/
-    object-fit: cover;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
 
-}
 
 /*Trip Planning*/
 
